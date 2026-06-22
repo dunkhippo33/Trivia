@@ -27,19 +27,19 @@ const TOPICS = [
     type: 'music-guess',
     coverImg: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80',
     questions: [
-      { trackId: '0V3wPSX9ygBnCm8psDIegu', q: "Who sings this song?",         a: 'Taylor Swift',     choices: ['Taylor Swift', 'Olivia Rodrigo', 'Billie Eilish', 'Sabrina Carpenter'] },
-      { trackId: '1BxfuPKGuaTgP7aM0Bbdwr', q: "What's the name of this song?", a: 'Cruel Summer',     choices: ['Cruel Summer', 'Shake It Off', 'Anti-Hero', 'Love Story'] },
-      { trackId: '4LRPiXqCikLlN15c3yImP7', q: "Who sings this song?",         a: 'Harry Styles',     choices: ['Harry Styles', 'Zayn', 'Niall Horan', 'Shawn Mendes'] },
-      { trackId: '1EVTEH6j21yg6zjwlw4dlj', q: "What's the name of this song?", a: 'drivers license',  choices: ['drivers license', 'good 4 u', 'deja vu', 'vampire'] },
-      { trackId: '1Qrg8KqiBpW07V7PNxwwwL', q: "Who sings this song?",         a: 'SZA',              choices: ['SZA', 'Doja Cat', 'Cardi B', 'Lizzo'] },
-      { trackId: '0yLdNVWF3Srea0uzk55zFn', q: "Who sings this song?",         a: 'Miley Cyrus',      choices: ['Miley Cyrus', 'Katy Perry', 'Dua Lipa', 'Selena Gomez'] },
-      { trackId: '2qSkIjg1o9h3YT9RAgYN75', q: "What's the name of this song?", a: 'Espresso',         choices: ['Espresso', 'Feather', 'Please Please Please', 'Nonsense'] },
-      { trackId: '5N3hjp1WNayUPZrA8kJmJP', q: "Who sings this song?",         a: 'Sabrina Carpenter', choices: ['Sabrina Carpenter', 'Olivia Rodrigo', 'Gracie Abrams', 'Chappell Roan'] },
-      { trackId: '0WbMK4wrZ1wFSty9F7FCgu', q: "Who sings this song?",         a: 'Chappell Roan',    choices: ['Chappell Roan', 'Sabrina Carpenter', 'Gracie Abrams', 'Reneé Rapp'] },
-      { trackId: '0Z7nGFVCLfixWctgePsRk9', q: "Who sings this song?",         a: 'Beyoncé',          choices: ['Beyoncé', 'Taylor Swift', 'Kacey Musgraves', 'Megan Thee Stallion'] },
-      { trackId: '0VjIjW4GlUZAMYd2vXMi3b', q: "What's the name of this song?", a: 'Blinding Lights',  choices: ['Blinding Lights', 'Save Your Tears', 'Starboy', "Can't Feel My Face"] },
-      { trackId: '39LLxExYz6ewLAcYrzQQyP', q: "Who sings this song?",         a: 'Dua Lipa',         choices: ['Dua Lipa', 'Ariana Grande', 'Cardi B', 'Nicki Minaj'] },
-      { trackId: '7wZa0JXBfFS8W5abYnHWKC', q: "What's the name of this song?", a: 'What Was I Made For?', choices: ['What Was I Made For?', 'Happier Than Ever', 'bad guy', 'Ocean Eyes'] },
+      { trackId: '0V3wPSX9ygBnCm8psDIegu', q: "Who sings this song?",          a: 'Taylor Swift',        choices: ['Taylor Swift', 'Olivia Rodrigo', 'Billie Eilish', 'Sabrina Carpenter', 'Dua Lipa', 'Ariana Grande'] },
+      { trackId: '1BxfuPKGuaTgP7aM0Bbdwr', q: "What's the name of this song?",  a: 'Cruel Summer',        choices: ['Cruel Summer', 'Shake It Off', 'Anti-Hero', 'Love Story', 'Blank Space', 'Fearless'] },
+      { trackId: '4LRPiXqCikLlN15c3yImP7', q: "Who sings this song?",          a: 'Harry Styles',        choices: ['Harry Styles', 'Zayn', 'Niall Horan', 'Shawn Mendes', 'Ed Sheeran', 'Justin Bieber'] },
+      { trackId: '1EVTEH6j21yg6zjwlw4dlj', q: "What's the name of this song?",  a: 'drivers license',     choices: ['drivers license', 'good 4 u', 'deja vu', 'vampire', 'brutal', 'traitor'] },
+      { trackId: '1Qrg8KqiBpW07V7PNxwwwL', q: "Who sings this song?",          a: 'SZA',                 choices: ['SZA', 'Doja Cat', 'Cardi B', 'Lizzo', 'Megan Thee Stallion', 'Jhené Aiko'] },
+      { trackId: '0yLdNVWF3Srea0uzk55zFn', q: "Who sings this song?",          a: 'Miley Cyrus',         choices: ['Miley Cyrus', 'Katy Perry', 'Dua Lipa', 'Selena Gomez', 'Ariana Grande', 'Halsey'] },
+      { trackId: '2qSkIjg1o9h3YT9RAgYN75', q: "What's the name of this song?",  a: 'Espresso',            choices: ['Espresso', 'Feather', 'Please Please Please', 'Nonsense', 'Skin', 'Fast Times'] },
+      { trackId: '5N3hjp1WNayUPZrA8kJmJP', q: "Who sings this song?",          a: 'Sabrina Carpenter',   choices: ['Sabrina Carpenter', 'Olivia Rodrigo', 'Gracie Abrams', 'Chappell Roan', 'Reneé Rapp', 'Tate McRae'] },
+      { trackId: '0WbMK4wrZ1wFSty9F7FCgu', q: "Who sings this song?",          a: 'Chappell Roan',       choices: ['Chappell Roan', 'Sabrina Carpenter', 'Gracie Abrams', 'Reneé Rapp', 'Tate McRae', 'Maisie Peters'] },
+      { trackId: '0Z7nGFVCLfixWctgePsRk9', q: "Who sings this song?",          a: 'Beyoncé',             choices: ['Beyoncé', 'Taylor Swift', 'Kacey Musgraves', 'Megan Thee Stallion', 'Lizzo', 'Cardi B'] },
+      { trackId: '0VjIjW4GlUZAMYd2vXMi3b', q: "What's the name of this song?",  a: 'Blinding Lights',     choices: ['Blinding Lights', 'Save Your Tears', 'Starboy', "Can't Feel My Face", 'In Your Eyes', 'After Hours'] },
+      { trackId: '39LLxExYz6ewLAcYrzQQyP', q: "Who sings this song?",          a: 'Dua Lipa',            choices: ['Dua Lipa', 'Ariana Grande', 'Cardi B', 'Nicki Minaj', 'Lizzo', 'Megan Thee Stallion'] },
+      { trackId: '7wZa0JXBfFS8W5abYnHWKC', q: "What's the name of this song?",  a: 'What Was I Made For?', choices: ['What Was I Made For?', 'Happier Than Ever', 'bad guy', 'Ocean Eyes', 'About Damn Time', 'vampire'] },
     ]
   },
   {
@@ -184,15 +184,16 @@ function buildBreedQuestion(container, q) {
 
 function buildMusicQuestion(container, q) {
   container.innerHTML = `
-    <p class="music-hint">🎧 Press play and try to guess before peeking at the player!</p>
     <div class="spotify-wrap">
       <iframe class="spotify-iframe"
         src="https://open.spotify.com/embed/track/${q.trackId}?utm_source=generator&theme=0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"></iframe>
+      <div class="spotify-cover-top">🎵 Mystery Song<span>Press ▶ to play!</span></div>
+      <div class="spotify-cover-bl"></div>
     </div>
     <h2 class="q-text">${q.q}</h2>
-    <div class="answers-grid" id="answers-grid"></div>
+    <div class="answers-grid six-up" id="answers-grid"></div>
   `;
   buildAnswerButtons(q.choices, q.a);
 }
@@ -220,9 +221,7 @@ function selectAnswer(btn, selected, correct) {
     btn.classList.add('wrong');
   }
 
-  // Reveal the song name in the Spotify cover
-  const cover = document.querySelector('.spotify-cover');
-  if (cover) cover.classList.add('revealed');
+  document.querySelectorAll('.spotify-cover-top, .spotify-cover-bl').forEach(el => el.classList.add('revealed'));
 
   setTimeout(() => {
     currentIndex++;

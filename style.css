@@ -101,16 +101,43 @@ h1 { font-size: 2.4rem; text-align: center; color: #4c3d8f; }
 
 /* ── Music guess ── */
 .spotify-wrap {
-  width: 100%;
-  border-radius: 12px; overflow: hidden;
+  position: relative;
+  width: 100%; border-radius: 12px; overflow: hidden;
   margin-bottom: 16px;
 }
-.spotify-iframe { width: 100%; height: 152px; border: none; display: block; border-radius: 12px; }
+.spotify-iframe { width: 100%; height: 152px; border: none; display: block; }
 
-.music-hint {
-  font-size: 0.85rem; color: #888; text-align: center;
-  margin-bottom: 14px;
+/* Covers the top portion (album art, title, artist) */
+.spotify-cover-top {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 86px;
+  background: #121212;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 4px;
+  color: #e0e0e0; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+  transition: opacity 0.4s;
 }
+.spotify-cover-top span { font-size: 0.78rem; color: #777; font-weight: 400; }
+
+/* Covers the bottom-left (save button / ... menu area), leaves play button at bottom-right */
+.spotify-cover-bl {
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 66px; right: 95px;
+  background: #121212;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.spotify-cover-top.revealed,
+.spotify-cover-bl.revealed { opacity: 0; }
+
+/* ── 6-choice answer grid (music) ── */
+.answers-grid.six-up { grid-template-columns: 1fr 1fr 1fr; }
+.answers-grid.six-up .answer-btn { padding: 13px 10px; font-size: 0.88rem; }
 
 /* ── Answer buttons ── */
 .answers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
