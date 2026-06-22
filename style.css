@@ -101,28 +101,15 @@ h1 { font-size: 2.4rem; text-align: center; color: #4c3d8f; }
 
 /* ── Music guess ── */
 .spotify-wrap {
-  position: relative;
-  width: 100%; height: 80px;
+  width: 100%;
   border-radius: 12px; overflow: hidden;
-  margin-bottom: 6px;
+  margin-bottom: 16px;
 }
-.spotify-iframe { width: 100%; height: 80px; border: none; display: block; border-radius: 12px; }
-
-/* Covers the track name / artist text in the Spotify embed, leaving controls visible */
-.spotify-cover {
-  position: absolute;
-  top: 0; left: 75px; right: 105px; bottom: 0;
-  background: #121212;
-  display: flex; align-items: center; justify-content: center;
-  color: #b3b3b3; font-size: 0.88rem; font-weight: 600;
-  letter-spacing: 0.08em; pointer-events: none;
-  transition: opacity 0.4s;
-}
-.spotify-cover.revealed { opacity: 0; }
+.spotify-iframe { width: 100%; height: 152px; border: none; display: block; border-radius: 12px; }
 
 .music-hint {
-  font-size: 0.82rem; color: #aaa; text-align: center;
-  margin-bottom: 18px; letter-spacing: 0.03em;
+  font-size: 0.85rem; color: #888; text-align: center;
+  margin-bottom: 14px;
 }
 
 /* ── Answer buttons ── */

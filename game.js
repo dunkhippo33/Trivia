@@ -6,18 +6,18 @@ const TOPICS = [
     type: 'breed-guess',
     coverImg: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80',
     questions: [
-      { breed: 'Golden Retriever',   breedPath: 'retriever/golden',   choices: ['Golden Retriever', 'Labrador Retriever', 'Beagle', 'Cocker Spaniel'] },
-      { breed: 'German Shepherd',    breedPath: 'germanshepherd',     choices: ['German Shepherd', 'Belgian Malinois', 'Husky', 'Doberman'] },
-      { breed: 'Husky',              breedPath: 'husky',              choices: ['Husky', 'Alaskan Malamute', 'Samoyed', 'German Shepherd'] },
-      { breed: 'Corgi',              breedPath: 'corgi',              choices: ['Corgi', 'Dachshund', 'Sheltie', 'Beagle'] },
-      { breed: 'Dachshund',          breedPath: 'dachshund',          choices: ['Dachshund', 'Basset Hound', 'Corgi', 'Beagle'] },
-      { breed: 'Poodle',             breedPath: 'poodle',             choices: ['Poodle', 'Bichon Frise', 'Maltese', 'Samoyed'] },
-      { breed: 'Shiba Inu',          breedPath: 'shiba',              choices: ['Shiba Inu', 'Akita', 'Husky', 'Korean Jindo'] },
-      { breed: 'English Bulldog',    breedPath: 'bulldog/english',    choices: ['English Bulldog', 'French Bulldog', 'Pug', 'Boston Terrier'] },
-      { breed: 'Dalmatian',          breedPath: 'dalmatian',          choices: ['Dalmatian', 'Pointer', 'English Setter', 'Australian Shepherd'] },
-      { breed: 'Beagle',             breedPath: 'beagle',             choices: ['Beagle', 'Basset Hound', 'Foxhound', 'Dachshund'] },
-      { breed: 'Labrador Retriever', breedPath: 'retriever/labrador', choices: ['Labrador Retriever', 'Golden Retriever', 'Weimaraner', 'Vizsla'] },
-      { breed: 'Pug',                breedPath: 'pug',                choices: ['Pug', 'Boston Terrier', 'French Bulldog', 'Shih Tzu'] },
+      { breed: 'Golden Retriever',   imgs: ['https://images.dog.ceo/breeds/retriever-golden/Z6A_4525_200809.jpg','https://images.dog.ceo/breeds/retriever-golden/n02099601_1743.jpg','https://images.dog.ceo/breeds/retriever-golden/n02099601_3666.jpg'], choices: ['Golden Retriever', 'Labrador Retriever', 'Beagle', 'Cocker Spaniel'] },
+      { breed: 'German Shepherd',    imgs: ['https://images.dog.ceo/breeds/german-shepherd/n02106662_2058.jpg','https://images.dog.ceo/breeds/german-shepherd/n02106662_3815.jpg','https://images.dog.ceo/breeds/german-shepherd/n02106662_6966.jpg'], choices: ['German Shepherd', 'Belgian Malinois', 'Husky', 'Doberman'] },
+      { breed: 'Husky',              imgs: ['https://images.dog.ceo/breeds/husky/n02110185_10171.jpg','https://images.dog.ceo/breeds/husky/n02110185_519.jpg','https://images.dog.ceo/breeds/husky/n02110185_6564.jpg'], choices: ['Husky', 'Alaskan Malamute', 'Samoyed', 'German Shepherd'] },
+      { breed: 'Corgi',              imgs: ['https://images.dog.ceo/breeds/corgi-cardigan/n02113186_10891.jpg','https://images.dog.ceo/breeds/corgi-cardigan/n02113186_11741.jpg','https://images.dog.ceo/breeds/corgi-cardigan/n02113186_13533.jpg'], choices: ['Corgi', 'Dachshund', 'Sheltie', 'Beagle'] },
+      { breed: 'Dachshund',          imgs: ['https://images.dog.ceo/breeds/dachshund/Stretched_Dachshund.jpg','https://images.dog.ceo/breeds/dachshund/dachshund-123503_640.jpg','https://images.dog.ceo/breeds/dachshund/dachshund-in-jacket.jpg'], choices: ['Dachshund', 'Basset Hound', 'Corgi', 'Beagle'] },
+      { breed: 'Poodle',             imgs: ['https://images.dog.ceo/breeds/poodle-miniature/n02113712_1897.jpg','https://images.dog.ceo/breeds/poodle-miniature/n02113712_599.jpg','https://images.dog.ceo/breeds/poodle-toy/n02113624_4112.jpg'], choices: ['Poodle', 'Bichon Frise', 'Maltese', 'Samoyed'] },
+      { breed: 'Shiba Inu',          imgs: ['https://images.dog.ceo/breeds/shiba/shiba-11.jpg','https://images.dog.ceo/breeds/shiba/shiba-14.jpg','https://images.dog.ceo/breeds/shiba/shiba-6.jpg'], choices: ['Shiba Inu', 'Akita', 'Husky', 'Korean Jindo'] },
+      { breed: 'English Bulldog',    imgs: ['https://images.dog.ceo/breeds/bulldog-english/bunz.jpg','https://images.dog.ceo/breeds/bulldog-english/jager-1.jpg','https://images.dog.ceo/breeds/bulldog-english/mami.jpg'], choices: ['English Bulldog', 'French Bulldog', 'Pug', 'Boston Terrier'] },
+      { breed: 'Dalmatian',          imgs: ['https://images.dog.ceo/breeds/dalmatian/cooper1.jpg','https://images.dog.ceo/breeds/dalmatian/cooper2.jpg'], choices: ['Dalmatian', 'Pointer', 'English Setter', 'Australian Shepherd'] },
+      { breed: 'Beagle',             imgs: ['https://images.dog.ceo/breeds/beagle/n02088364_10354.jpg','https://images.dog.ceo/breeds/beagle/n02088364_12973.jpg','https://images.dog.ceo/breeds/beagle/n02088364_6089.jpg'], choices: ['Beagle', 'Basset Hound', 'Foxhound', 'Dachshund'] },
+      { breed: 'Labrador Retriever', imgs: ['https://images.dog.ceo/breeds/labrador/n02099712_4965.jpg','https://images.dog.ceo/breeds/labrador/n02099712_5679.jpg','https://images.dog.ceo/breeds/labrador/n02099712_6345.jpg'], choices: ['Labrador Retriever', 'Golden Retriever', 'Weimaraner', 'Vizsla'] },
+      { breed: 'Pug',                imgs: ['https://images.dog.ceo/breeds/pug/n02110958_12080.jpg','https://images.dog.ceo/breeds/pug/n02110958_14017.jpg','https://images.dog.ceo/breeds/pug/n02110958_15014.jpg'], choices: ['Pug', 'Boston Terrier', 'French Bulldog', 'Shih Tzu'] },
     ]
   },
   {
@@ -128,7 +128,7 @@ function startGame(topicId) {
   renderQuestion();
 }
 
-async function renderQuestion() {
+function renderQuestion() {
   const q = questions[currentIndex];
   document.getElementById('topic-badge').textContent = `${currentTopic.icon} ${currentTopic.label}`;
   document.getElementById('question-counter').textContent = `Question ${currentIndex + 1} of ${questions.length}`;
@@ -138,7 +138,7 @@ async function renderQuestion() {
   area.innerHTML = '';
 
   if (currentTopic.type === 'breed-guess') {
-    await buildBreedQuestion(area, q);
+    buildBreedQuestion(area, q);
   } else if (currentTopic.type === 'music-guess') {
     buildMusicQuestion(area, q);
   } else {
@@ -162,7 +162,8 @@ function buildStandardQuestion(container, q) {
   buildAnswerButtons(q.choices, q.a);
 }
 
-async function buildBreedQuestion(container, q) {
+function buildBreedQuestion(container, q) {
+  const imgUrl = q.imgs[Math.floor(Math.random() * q.imgs.length)];
   container.innerHTML = `
     <h2 class="q-text" style="margin-bottom:14px;">🐶 What breed is this dog?</h2>
     <div class="breed-image-wrap">
@@ -174,33 +175,22 @@ async function buildBreedQuestion(container, q) {
 
   const img = container.querySelector('.breed-image');
   const ph  = container.querySelector('.breed-placeholder');
+  img.onload = () => { img.classList.add('loaded'); ph.style.display = 'none'; };
+  img.onerror = () => { ph.innerHTML = '🐾 <span>Image unavailable</span>'; };
+  img.src = imgUrl;
 
   buildAnswerButtons(q.choices, q.breed);
-
-  try {
-    const res  = await fetch(`https://dog.ceo/api/breed/${q.breedPath}/images/random`);
-    const data = await res.json();
-    if (data.status === 'success') {
-      img.onload = () => { img.classList.add('loaded'); ph.style.display = 'none'; };
-      img.src = data.message;
-    } else {
-      ph.innerHTML = '🐾 <span>Image unavailable</span>';
-    }
-  } catch (_) {
-    ph.innerHTML = '🐾 <span>Image unavailable</span>';
-  }
 }
 
 function buildMusicQuestion(container, q) {
   container.innerHTML = `
+    <p class="music-hint">🎧 Press play and try to guess before peeking at the player!</p>
     <div class="spotify-wrap">
       <iframe class="spotify-iframe"
         src="https://open.spotify.com/embed/track/${q.trackId}?utm_source=generator&theme=0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"></iframe>
-      <div class="spotify-cover">🎵 &nbsp; ??? &nbsp; 🎵</div>
     </div>
-    <p class="music-hint">▶ Press play, listen, then pick your answer — cover reveals after!</p>
     <h2 class="q-text">${q.q}</h2>
     <div class="answers-grid" id="answers-grid"></div>
   `;
