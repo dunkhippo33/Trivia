@@ -26,6 +26,17 @@ const TOPICS = [
       { breed: 'Canaan Dog',              imgs: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/CanaanDogChakede.jpg/330px-CanaanDogChakede.jpg'], choices: ['Canaan Dog', 'Basenji', 'Dingo', 'Carolina Dog'] },
       { breed: 'Entlebucher Mountain Dog', imgs: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Elio_v_Schaerlig_im_Juni_2007_klein.jpg/330px-Elio_v_Schaerlig_im_Juni_2007_klein.jpg'], choices: ['Entlebucher Mountain Dog', 'Appenzeller Sennenhund', 'Bernese Mountain Dog', 'Greater Swiss Mountain Dog'] },
       { breed: 'Schipperke',              imgs: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Schipperke0001.jpg/330px-Schipperke0001.jpg'], choices: ['Schipperke', 'Belgian Sheepdog', 'Miniature Schnauzer', 'Pomeranian'] },
+      // Mixed breeds
+      { breed: 'Labradoodle',   q: '🐾 What mix is this dog?', imgs: ['https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Labradoodle-Brown-Male-SideFace.jpg/330px-Labradoodle-Brown-Male-SideFace.jpg'], choices: ['Labradoodle', 'Goldendoodle', 'Aussiedoodle', 'Bernedoodle'] },
+      { breed: 'Goldendoodle',  q: '🐾 What mix is this dog?', imgs: ['https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Golden_Doodle_Standing_%28HD%29.jpg/330px-Golden_Doodle_Standing_%28HD%29.jpg'], choices: ['Goldendoodle', 'Labradoodle', 'Cockapoo', 'Bernedoodle'] },
+      { breed: 'Cockapoo',      q: '🐾 What mix is this dog?', imgs: ['https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Cockapoo_apricot_standing.jpg/330px-Cockapoo_apricot_standing.jpg'], choices: ['Cockapoo', 'Cavapoo', 'Maltipoo', 'Schnoodle'] },
+      { breed: 'Puggle',        q: '🐾 What mix is this dog?', imgs: ['https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/SecondGenPuggle.jpg/330px-SecondGenPuggle.jpg'], choices: ['Puggle', 'Beagle', 'Pug', 'Chiweenie'] },
+      { breed: 'Cavapoo',       q: '🐾 What mix is this dog?', imgs: ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1_Red_Toy_Cavoodle_Puppy.jpg/330px-F1_Red_Toy_Cavoodle_Puppy.jpg'], choices: ['Cavapoo', 'Cockapoo', 'Maltipoo', 'Schnoodle'] },
+      { breed: 'Schnoodle',     q: '🐾 What mix is this dog?', imgs: ['https://upload.wikimedia.org/wikipedia/commons/d/db/Schnoodle_3.jpg'], choices: ['Schnoodle', 'Labradoodle', 'Cockapoo', 'Cavapoo'] },
+      { breed: 'Pomsky',        q: '🐾 What mix is this dog?', imgs: ['https://upload.wikimedia.org/wikipedia/commons/5/54/Pomsky_Dog_Breed_-_Pomeranian_Husky_Mix.jpg'], choices: ['Pomsky', 'Siberian Husky', 'Alaskan Klee Kai', 'Samoyed'] },
+      { breed: 'Sheepadoodle',  q: '🐾 What mix is this dog?', imgs: ['https://upload.wikimedia.org/wikipedia/commons/8/85/Sheepadoodle.JPG'], choices: ['Sheepadoodle', 'Bernedoodle', 'Aussiedoodle', 'Labradoodle'] },
+      { breed: 'Bernedoodle',   q: '🐾 What mix is this dog?', imgs: ['https://upload.wikimedia.org/wikipedia/commons/2/2a/Bernedoodle_Dog.jpg'], choices: ['Bernedoodle', 'Sheepadoodle', 'Saint Berdoodle', 'Aussiedoodle'] },
+      { breed: 'Aussiedoodle',  q: '🐾 What mix is this dog?', imgs: ['https://upload.wikimedia.org/wikipedia/commons/e/ef/Thor%2C_2021_%2851256377380%29.jpg'], choices: ['Aussiedoodle', 'Labradoodle', 'Goldendoodle', 'Bernedoodle'] },
     ]
   },
   {
@@ -201,8 +212,9 @@ function buildStandardQuestion(container, q) {
 
 function buildBreedQuestion(container, q) {
   const imgUrl = q.imgs[Math.floor(Math.random() * q.imgs.length)];
+  const questionText = q.q || '🐶 What breed is this dog?';
   container.innerHTML = `
-    <h2 class="q-text" style="margin-bottom:14px;">🐶 What breed is this dog?</h2>
+    <h2 class="q-text" style="margin-bottom:14px;">${questionText}</h2>
     <div class="breed-image-wrap">
       <img class="breed-image" src="" alt="${q.breed}" />
       <div class="breed-placeholder">🐾 <span>Loading…</span></div>
