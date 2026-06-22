@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivia Time!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- Screen: Topic Select -->
+    <div id="screen-topics" class="screen active">
+      <h1>🎉 Trivia Time!</h1>
+      <p class="subtitle">Pick a topic to play</p>
+      <div id="topic-grid"></div>
+    </div>
+
+    <!-- Screen: Question -->
+    <div id="screen-question" class="screen">
+      <div id="topic-badge"></div>
+      <div id="progress-bar-wrap"><div id="progress-bar"></div></div>
+      <p id="question-counter"></p>
+      <h2 id="question-text"></h2>
+      <div id="answers-grid"></div>
+    </div>
+
+    <!-- Screen: Results -->
+    <div id="screen-results" class="screen">
+      <div id="result-emoji"></div>
+      <h2 id="result-title"></h2>
+      <p id="result-score"></p>
+      <p id="result-msg"></p>
+      <button id="play-again-btn" onclick="goHome()">🏠 Pick Another Topic</button>
+    </div>
+
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
