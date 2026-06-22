@@ -135,9 +135,9 @@ h1 { font-size: 2.4rem; text-align: center; color: #4c3d8f; }
 .spotify-cover-top.revealed,
 .spotify-cover-bl.revealed { opacity: 0; }
 
-/* ── 6-choice answer grid (music) ── */
-.answers-grid.six-up { grid-template-columns: 1fr 1fr 1fr; }
-.answers-grid.six-up .answer-btn { padding: 13px 10px; font-size: 0.88rem; }
+/* ── 8-choice answer grid (music) ── */
+.answers-grid.eight-up { grid-template-columns: 1fr 1fr; }
+.answers-grid.eight-up .answer-btn { padding: 11px 12px; font-size: 0.9rem; }
 
 /* ── Answer buttons ── */
 .answers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }

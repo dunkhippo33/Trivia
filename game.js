@@ -35,19 +35,48 @@ const TOPICS = [
     type: 'music-guess',
     coverImg: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80',
     questions: [
-      { trackId: '0V3wPSX9ygBnCm8psDIegu', q: "Who sings this song?",          a: 'Taylor Swift',        choices: ['Taylor Swift', 'Olivia Rodrigo', 'Billie Eilish', 'Sabrina Carpenter', 'Dua Lipa', 'Ariana Grande'] },
-      { trackId: '1BxfuPKGuaTgP7aM0Bbdwr', q: "What's the name of this song?",  a: 'Cruel Summer',        choices: ['Cruel Summer', 'Shake It Off', 'Anti-Hero', 'Love Story', 'Blank Space', 'Fearless'] },
-      { trackId: '4LRPiXqCikLlN15c3yImP7', q: "Who sings this song?",          a: 'Harry Styles',        choices: ['Harry Styles', 'Zayn', 'Niall Horan', 'Shawn Mendes', 'Ed Sheeran', 'Justin Bieber'] },
-      { trackId: '1EVTEH6j21yg6zjwlw4dlj', q: "What's the name of this song?",  a: 'drivers license',     choices: ['drivers license', 'good 4 u', 'deja vu', 'vampire', 'brutal', 'traitor'] },
-      { trackId: '1Qrg8KqiBpW07V7PNxwwwL', q: "Who sings this song?",          a: 'SZA',                 choices: ['SZA', 'Doja Cat', 'Cardi B', 'Lizzo', 'Megan Thee Stallion', 'Jhené Aiko'] },
-      { trackId: '0yLdNVWF3Srea0uzk55zFn', q: "Who sings this song?",          a: 'Miley Cyrus',         choices: ['Miley Cyrus', 'Katy Perry', 'Dua Lipa', 'Selena Gomez', 'Ariana Grande', 'Halsey'] },
-      { trackId: '2qSkIjg1o9h3YT9RAgYN75', q: "What's the name of this song?",  a: 'Espresso',            choices: ['Espresso', 'Feather', 'Please Please Please', 'Nonsense', 'Skin', 'Fast Times'] },
-      { trackId: '5N3hjp1WNayUPZrA8kJmJP', q: "Who sings this song?",          a: 'Sabrina Carpenter',   choices: ['Sabrina Carpenter', 'Olivia Rodrigo', 'Gracie Abrams', 'Chappell Roan', 'Reneé Rapp', 'Tate McRae'] },
-      { trackId: '0WbMK4wrZ1wFSty9F7FCgu', q: "Who sings this song?",          a: 'Chappell Roan',       choices: ['Chappell Roan', 'Sabrina Carpenter', 'Gracie Abrams', 'Reneé Rapp', 'Tate McRae', 'Maisie Peters'] },
-      { trackId: '0Z7nGFVCLfixWctgePsRk9', q: "Who sings this song?",          a: 'Beyoncé',             choices: ['Beyoncé', 'Taylor Swift', 'Kacey Musgraves', 'Megan Thee Stallion', 'Lizzo', 'Cardi B'] },
-      { trackId: '0VjIjW4GlUZAMYd2vXMi3b', q: "What's the name of this song?",  a: 'Blinding Lights',     choices: ['Blinding Lights', 'Save Your Tears', 'Starboy', "Can't Feel My Face", 'In Your Eyes', 'After Hours'] },
-      { trackId: '39LLxExYz6ewLAcYrzQQyP', q: "Who sings this song?",          a: 'Dua Lipa',            choices: ['Dua Lipa', 'Ariana Grande', 'Cardi B', 'Nicki Minaj', 'Lizzo', 'Megan Thee Stallion'] },
-      { trackId: '7wZa0JXBfFS8W5abYnHWKC', q: "What's the name of this song?",  a: 'What Was I Made For?', choices: ['What Was I Made For?', 'Happier Than Ever', 'bad guy', 'Ocean Eyes', 'About Damn Time', 'vampire'] },
+      // Justin Bieber
+      { trackId: '3mVZMDBFT5EjUut8wcRFHx', q: "Who sings this song?", a: 'Justin Bieber',   choices: ['Justin Bieber', 'Shawn Mendes', 'Ed Sheeran', 'Harry Styles', 'Alex Warren', 'Zayn', 'Niall Horan', 'Charlie Puth'] },
+      { trackId: '52BqzIWKWXrhfKsVJFcKip', q: "Who sings this song?", a: 'Justin Bieber',   choices: ['Justin Bieber', 'Shawn Mendes', 'Ed Sheeran', 'Alex Warren', 'Lewis Capaldi', 'Niall Horan', 'Sam Smith', 'Harry Styles'] },
+      { trackId: '2f6ibbfurXdpelqh2VwraI', q: "Who sings this song?", a: 'Justin Bieber',   choices: ['Justin Bieber', 'The Weeknd', 'Ed Sheeran', 'Harry Styles', 'Shawn Mendes', 'Charlie Puth', 'Khalid', 'Drake'] },
+      { trackId: '31qCy5ZaophVA81wtlwLc4', q: "Who sings this song?", a: 'Justin Bieber',   choices: ['Justin Bieber', 'Ed Sheeran', 'Shawn Mendes', 'Harry Styles', 'Niall Horan', 'Charlie Puth', 'Zayn', 'Alex Warren'] },
+      // Ed Sheeran
+      { trackId: '25q3ZtFLPEPfAAENIXus81', q: "Who sings this song?", a: 'Ed Sheeran',      choices: ['Ed Sheeran', 'Shawn Mendes', 'Harry Styles', 'Justin Bieber', 'Niall Horan', 'James Bay', 'Sam Smith', 'Lewis Capaldi'] },
+      { trackId: '2mK3K5v84dH6wLXVoG7EEE', q: "Who sings this song?", a: 'Ed Sheeran',      choices: ['Ed Sheeran', 'Harry Styles', 'Niall Horan', 'Justin Bieber', 'Sam Smith', 'Lewis Capaldi', 'Shawn Mendes', 'James Bay'] },
+      { trackId: '1huvTbEYtgltjQRXzrNKGi', q: "Who sings this song?", a: 'Ed Sheeran',      choices: ['Ed Sheeran', 'Justin Bieber', 'Shawn Mendes', 'Harry Styles', 'Zayn', 'Khalid', 'Charlie Puth', 'Niall Horan'] },
+      { trackId: '5v4sZRuvWDcisoOk1PFv6T', q: "Who sings this song?", a: 'Ed Sheeran',      choices: ['Ed Sheeran', 'The Weeknd', 'Harry Styles', 'Zayn', 'Justin Bieber', 'Khalid', 'Sam Smith', 'Charlie Puth'] },
+      { trackId: '34gCuhDGsG4bRPIf9bb02f', q: "Who sings this song?", a: 'Ed Sheeran',      choices: ['Ed Sheeran', 'Justin Bieber', 'Shawn Mendes', 'Harry Styles', 'Niall Horan', 'Charlie Puth', 'James Bay', 'Zayn'] },
+      // Shawn Mendes
+      { trackId: '64RtW4LOS7VgrCVHqlicPD', q: "Who sings this song?", a: 'Shawn Mendes',    choices: ['Shawn Mendes', 'Justin Bieber', 'Ed Sheeran', 'Harry Styles', 'Zayn', 'Niall Horan', 'Alex Warren', 'Charlie Puth'] },
+      { trackId: '53B2XmmjJ9rriW1qciMBeX', q: "Who sings this song?", a: 'Shawn Mendes',    choices: ['Shawn Mendes', 'Justin Bieber', 'Ed Sheeran', 'Harry Styles', 'Alex Warren', 'Niall Horan', 'Charlie Puth', 'Zayn'] },
+      { trackId: '2QZ7WLBE8h2y1Y5Fb8RYbH', q: "Who sings this song?", a: 'Shawn Mendes',    choices: ['Shawn Mendes', 'Justin Bieber', 'Ed Sheeran', 'Harry Styles', 'Sam Smith', 'Lewis Capaldi', 'James Arthur', 'Alex Warren'] },
+      { trackId: '0vPV2E3udZXadm36U4SvFt', q: "Who sings this song?", a: 'Shawn Mendes',    choices: ['Shawn Mendes', 'Justin Bieber', 'Ed Sheeran', 'Harry Styles', 'Zayn', 'Niall Horan', 'Alex Warren', 'Charlie Puth'] },
+      // Alex Warren
+      { trackId: '6qqrTXSdwiJaq8SO0X2lSe', q: "Who sings this song?", a: 'Alex Warren',     choices: ['Alex Warren', 'Shawn Mendes', 'Justin Bieber', 'Ed Sheeran', 'Harry Styles', 'Zayn', 'Niall Horan', 'Charlie Puth'] },
+      { trackId: '089bZWiav2IhiF952gqUbV', q: "Who sings this song?", a: 'Alex Warren',     choices: ['Alex Warren', 'Shawn Mendes', 'Justin Bieber', 'Ed Sheeran', 'Harry Styles', 'Zayn', 'Niall Horan', 'Charlie Puth'] },
+      // Taylor Swift deeper cuts
+      { trackId: '1u4HUiREUR6vX1W1RYG2Tm', q: "Who sings this song?", a: 'Taylor Swift',    choices: ['Taylor Swift', 'Olivia Rodrigo', 'Billie Eilish', 'Sabrina Carpenter', 'Chappell Roan', 'Ariana Grande', 'Gracie Abrams', 'Maisie Peters'] },
+      { trackId: '0VE4kBnHJUgtMf0dy6DRmW', q: "Who sings this song?", a: 'Taylor Swift',    choices: ['Taylor Swift', 'Olivia Rodrigo', 'Billie Eilish', 'Sabrina Carpenter', 'Chappell Roan', 'Ariana Grande', 'Dua Lipa', 'Miley Cyrus'] },
+      { trackId: '6nK2pIKFcRc5frrZKHgsiT', q: "Who sings this song?", a: 'Taylor Swift',    choices: ['Taylor Swift', 'Olivia Rodrigo', 'Billie Eilish', 'Gracie Abrams', 'Chappell Roan', 'Ariana Grande', 'Dua Lipa', 'SZA'] },
+      { trackId: '0PurA4JVJ8YQgSVopY8fn6', q: "Who sings this song?", a: 'Taylor Swift',    choices: ['Taylor Swift', 'Olivia Rodrigo', 'Gracie Abrams', 'Billie Eilish', 'Chappell Roan', 'Ariana Grande', 'Dua Lipa', 'Maisie Peters'] },
+      { trackId: '1R0a2iXumgCiFb7HEZ7gUE', q: "Who sings this song?", a: 'Taylor Swift',    choices: ['Taylor Swift', 'Olivia Rodrigo', 'Billie Eilish', 'Sabrina Carpenter', 'Chappell Roan', 'Gracie Abrams', 'Ariana Grande', 'SZA'] },
+      // Olivia Rodrigo deeper cuts
+      { trackId: '1sgZSLYACTaYocOmrB8E0y', q: "Who sings this song?", a: 'Olivia Rodrigo',  choices: ['Olivia Rodrigo', 'Billie Eilish', 'Sabrina Carpenter', 'Gracie Abrams', 'Chappell Roan', 'Tate McRae', 'Reneé Rapp', 'Maisie Peters'] },
+      { trackId: '35eSXAktS5cpHCGnm52nxl', q: "Who sings this song?", a: 'Olivia Rodrigo',  choices: ['Olivia Rodrigo', 'Taylor Swift', 'Billie Eilish', 'Sabrina Carpenter', 'Gracie Abrams', 'Chappell Roan', 'Tate McRae', 'Ariana Grande'] },
+      { trackId: '4DB6upTZIXWqP96Jf1JRha', q: "Who sings this song?", a: 'Olivia Rodrigo',  choices: ['Olivia Rodrigo', 'Taylor Swift', 'Billie Eilish', 'Sabrina Carpenter', 'Gracie Abrams', 'Chappell Roan', 'SZA', 'Ariana Grande'] },
+      // Billie Eilish deeper cuts
+      { trackId: '1M0N3VW72zmZmHsCRgaAWg', q: "Who sings this song?", a: 'Billie Eilish',   choices: ['Billie Eilish', 'Olivia Rodrigo', 'Taylor Swift', 'Sabrina Carpenter', 'Gracie Abrams', 'Chappell Roan', 'SZA', 'Tate McRae'] },
+      { trackId: '54bFM56PmE4YLRnqpW6Tha', q: "Who sings this song?", a: 'Billie Eilish',   choices: ['Billie Eilish', 'Olivia Rodrigo', 'Taylor Swift', 'Sabrina Carpenter', 'Gracie Abrams', 'Chappell Roan', 'SZA', 'Tate McRae'] },
+      { trackId: '0u2P5u6lvoDfwTYjAADbn4', q: "Who sings this song?", a: 'Billie Eilish',   choices: ['Billie Eilish', 'Olivia Rodrigo', 'Taylor Swift', 'Gracie Abrams', 'Chappell Roan', 'Ariana Grande', 'SZA', 'Tate McRae'] },
+      // Others
+      { trackId: '1Qrg8KqiBpW07V7PNxwwwL', q: "Who sings this song?", a: 'SZA',             choices: ['SZA', 'Doja Cat', 'Cardi B', 'Lizzo', 'Megan Thee Stallion', 'Jhené Aiko', 'Ariana Grande', 'Beyoncé'] },
+      { trackId: '0WbMK4wrZ1wFSty9F7FCgu', q: "Who sings this song?", a: 'Chappell Roan',   choices: ['Chappell Roan', 'Sabrina Carpenter', 'Gracie Abrams', 'Reneé Rapp', 'Tate McRae', 'Maisie Peters', 'Olivia Rodrigo', 'Billie Eilish'] },
+      { trackId: '5N3hjp1WNayUPZrA8kJmJP', q: "Who sings this song?", a: 'Sabrina Carpenter', choices: ['Sabrina Carpenter', 'Chappell Roan', 'Olivia Rodrigo', 'Gracie Abrams', 'Reneé Rapp', 'Tate McRae', 'Billie Eilish', 'Taylor Swift'] },
+      { trackId: '0yLdNVWF3Srea0uzk55zFn', q: "Who sings this song?", a: 'Miley Cyrus',     choices: ['Miley Cyrus', 'Katy Perry', 'Dua Lipa', 'Selena Gomez', 'Ariana Grande', 'Halsey', 'Taylor Swift', 'Beyoncé'] },
+      { trackId: '0VjIjW4GlUZAMYd2vXMi3b', q: "Who sings this song?", a: 'The Weeknd',      choices: ['The Weeknd', 'Justin Bieber', 'Harry Styles', 'Ed Sheeran', 'Shawn Mendes', 'Drake', 'Zayn', 'Charlie Puth'] },
+      { trackId: '39LLxExYz6ewLAcYrzQQyP', q: "Who sings this song?", a: 'Dua Lipa',        choices: ['Dua Lipa', 'Ariana Grande', 'Cardi B', 'Nicki Minaj', 'Lizzo', 'Megan Thee Stallion', 'Miley Cyrus', 'Beyoncé'] },
+      { trackId: '0Z7nGFVCLfixWctgePsRk9', q: "Who sings this song?", a: 'Beyoncé',         choices: ['Beyoncé', 'Taylor Swift', 'Kacey Musgraves', 'Megan Thee Stallion', 'Lizzo', 'Cardi B', 'Miley Cyrus', 'Dua Lipa'] },
+      { trackId: '4LRPiXqCikLlN15c3yImP7', q: "Who sings this song?", a: 'Harry Styles',    choices: ['Harry Styles', 'Zayn', 'Niall Horan', 'Shawn Mendes', 'Ed Sheeran', 'Justin Bieber', 'Charlie Puth', 'Alex Warren'] },
     ]
   },
   {
@@ -201,7 +230,7 @@ function buildMusicQuestion(container, q) {
       <div class="spotify-cover-bl"></div>
     </div>
     <h2 class="q-text">${q.q}</h2>
-    <div class="answers-grid six-up" id="answers-grid"></div>
+    <div class="answers-grid eight-up" id="answers-grid"></div>
   `;
   buildAnswerButtons(q.choices, q.a);
 }
