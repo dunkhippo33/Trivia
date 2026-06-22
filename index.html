@@ -9,23 +9,24 @@
 <body>
   <div id="app">
 
-    <!-- Screen: Topic Select -->
     <div id="screen-topics" class="screen active">
       <h1>🎉 Trivia Time!</h1>
       <p class="subtitle">Pick a topic to play</p>
       <div id="topic-grid"></div>
     </div>
 
-    <!-- Screen: Question -->
     <div id="screen-question" class="screen">
       <div id="topic-badge"></div>
       <div id="progress-bar-wrap"><div id="progress-bar"></div></div>
       <p id="question-counter"></p>
+      <div id="question-image-wrap">
+        <img id="question-image" src="" alt="" />
+        <div id="image-placeholder">🔍</div>
+      </div>
       <h2 id="question-text"></h2>
       <div id="answers-grid"></div>
     </div>
 
-    <!-- Screen: Results -->
     <div id="screen-results" class="screen">
       <div id="result-emoji"></div>
       <h2 id="result-title"></h2>
