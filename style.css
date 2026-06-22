@@ -24,7 +24,7 @@ body {
 
 @keyframes popIn {
   from { transform: scale(0.95); opacity: 0; }
-  to   { transform: scale(1);    opacity: 1; }
+  to   { transform: scale(1); opacity: 1; }
 }
 
 /* ── Topic Select ── */
@@ -52,106 +52,88 @@ h1 { font-size: 2.4rem; text-align: center; color: #4c3d8f; }
   padding-bottom: 18px;
   color: white;
 }
-.topic-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.2); }
-
+.topic-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.25); }
 .topic-card img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
 }
 .topic-card .overlay {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 60%);
   z-index: 1;
 }
-.topic-card .card-label {
-  position: relative;
-  z-index: 2;
-  font-size: 1.15rem;
-  font-weight: 700;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
-}
-.topic-card .card-icon {
-  position: relative;
-  z-index: 2;
-  font-size: 1.8rem;
-  margin-bottom: 4px;
-}
+.topic-card .card-label { position: relative; z-index: 2; font-size: 1.1rem; font-weight: 700; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+.topic-card .card-icon  { position: relative; z-index: 2; font-size: 1.8rem; margin-bottom: 4px; }
 
-/* ── Question Screen ── */
+/* ── Question screen shared ── */
 #topic-badge {
   display: inline-block;
-  background: #f0edff;
-  color: #5a3fcf;
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  border-radius: 999px;
-  padding: 4px 14px;
-  margin-bottom: 14px;
+  background: #f0edff; color: #5a3fcf;
+  font-weight: 700; font-size: 0.82rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  border-radius: 999px; padding: 4px 14px; margin-bottom: 14px;
 }
+#progress-bar-wrap { background: #eee; border-radius: 999px; height: 8px; margin-bottom: 10px; overflow: hidden; }
+#progress-bar { height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 999px; transition: width 0.4s ease; }
+#question-counter { text-align: right; color: #aaa; font-size: 0.85rem; margin-bottom: 18px; }
 
-#progress-bar-wrap {
-  background: #eee;
-  border-radius: 999px;
-  height: 8px;
-  margin-bottom: 10px;
-  overflow: hidden;
+/* ── Standard question (Animals, Disney) ── */
+.q-image-wrap {
+  width: 100%; height: 210px; border-radius: 16px; overflow: hidden;
+  margin-bottom: 18px; background: #f3f0ff;
+  display: flex; align-items: center; justify-content: center; position: relative;
 }
-#progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  border-radius: 999px;
-  transition: width 0.4s ease;
+.q-image { width: 100%; height: 100%; object-fit: cover; display: none; }
+.q-image.loaded { display: block; }
+.q-placeholder { font-size: 3.5rem; position: absolute; }
+
+.q-text { font-size: 1.22rem; color: #222; margin-bottom: 22px; line-height: 1.5; }
+
+/* ── Breed guess (Dogs) ── */
+.breed-image-wrap {
+  width: 100%; height: 300px; border-radius: 16px; overflow: hidden;
+  margin-bottom: 22px; background: #f9f5ff;
+  display: flex; align-items: center; justify-content: center; position: relative;
 }
+.breed-image { width: 100%; height: 100%; object-fit: cover; display: none; }
+.breed-image.loaded { display: block; }
+.breed-placeholder { font-size: 2.2rem; color: #aaa; position: absolute; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.breed-placeholder span { font-size: 0.9rem; letter-spacing: 0.04em; }
 
-#question-counter { text-align: right; color: #aaa; font-size: 0.85rem; margin-bottom: 16px; }
-
-#question-image-wrap {
-  width: 100%;
-  height: 200px;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  background: #f3f0ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ── Music guess ── */
+.spotify-wrap {
   position: relative;
+  width: 100%; height: 80px;
+  border-radius: 12px; overflow: hidden;
+  margin-bottom: 6px;
 }
-#question-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: none;
-}
-#question-image.loaded { display: block; }
-#image-placeholder {
-  font-size: 4rem;
+.spotify-iframe { width: 100%; height: 80px; border: none; display: block; border-radius: 12px; }
+
+/* Covers the track name / artist text in the Spotify embed, leaving controls visible */
+.spotify-cover {
   position: absolute;
+  top: 0; left: 75px; right: 105px; bottom: 0;
+  background: #121212;
+  display: flex; align-items: center; justify-content: center;
+  color: #b3b3b3; font-size: 0.88rem; font-weight: 600;
+  letter-spacing: 0.08em; pointer-events: none;
+  transition: opacity 0.4s;
+}
+.spotify-cover.revealed { opacity: 0; }
+
+.music-hint {
+  font-size: 0.82rem; color: #aaa; text-align: center;
+  margin-bottom: 18px; letter-spacing: 0.03em;
 }
 
-#question-text { font-size: 1.25rem; color: #222; margin-bottom: 24px; line-height: 1.5; }
-
-#answers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+/* ── Answer buttons ── */
+.answers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
 .answer-btn {
-  border: 2px solid #e0e0e0;
-  border-radius: 14px;
-  padding: 16px 14px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #333;
-  background: #fafafa;
-  cursor: pointer;
+  border: 2px solid #e0e0e0; border-radius: 14px;
+  padding: 16px 14px; font-size: 0.95rem; font-weight: 600;
+  color: #333; background: #fafafa; cursor: pointer;
   transition: background 0.15s, border-color 0.15s, transform 0.1s;
-  text-align: left;
-  line-height: 1.4;
+  text-align: left; line-height: 1.4;
 }
 .answer-btn:hover:not(:disabled) { background: #f0edff; border-color: #a594f9; transform: scale(1.02); }
 .answer-btn.correct { background: #d4f5e0; border-color: #2ecc71; color: #166534; }
@@ -163,17 +145,13 @@ h1 { font-size: 2.4rem; text-align: center; color: #4c3d8f; }
 #result-emoji { font-size: 5rem; margin-bottom: 16px; }
 #result-title { font-size: 2rem; color: #4c3d8f; margin-bottom: 10px; }
 #result-score { font-size: 1.4rem; font-weight: 700; color: #333; margin-bottom: 8px; }
-#result-msg { color: #777; margin-bottom: 32px; font-size: 1rem; }
+#result-msg   { color: #777; margin-bottom: 32px; }
 
 #play-again-btn {
-  border: none;
-  border-radius: 14px;
-  padding: 16px 36px;
-  font-size: 1.05rem;
-  font-weight: 700;
+  border: none; border-radius: 14px; padding: 16px 36px;
+  font-size: 1.05rem; font-weight: 700;
   background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  cursor: pointer;
+  color: white; cursor: pointer;
   transition: transform 0.15s, box-shadow 0.15s;
 }
 #play-again-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(102,126,234,0.4); }
